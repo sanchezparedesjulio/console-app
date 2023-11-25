@@ -12,8 +12,9 @@ public class BseInstrument : IBseInstrument
 
     public bool IsDetected()
     {
-        var instrumentIdString = this.scpi.Query("BSE:*IDN?");
-        return instrumentIdString == "Keysight,BSE";
+        //Canot read with last command
+        var instrumentIdString = this.scpi.Query("*IDN?");
+        return instrumentIdString == "Keysight,BSE,1.0";
     }
 
     public bool UeConnected()

@@ -7,7 +7,7 @@ namespace RadioConformanceTests.TC;
 
 
 
-class TC_Sensitivity 
+public class TC_Sensitivity 
 {
     /// <summary>
     /// Test case configuration
@@ -34,7 +34,7 @@ class TC_Sensitivity
         try
         {
             var finalVerdict = TestVerdict.Pass;
-            Console.WriteLine($"TC_Sensitivity::START");
+            
 
             if(!this.bse.IsDetected())
             {
@@ -80,7 +80,7 @@ class TC_Sensitivity
         finally
         {
             this.bse.CellOff();
-            Console.WriteLine($"TC_Sensitivity::END");
+            
         }
     }
 
